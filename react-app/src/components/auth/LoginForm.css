@@ -1,0 +1,88 @@
+.demo-link {
+    color: #222;
+    align-self: center;
+    padding-top: 20px;
+    font-size: 14px;
+    transition: transform 0.3s;
+}
+
+.demo-link:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.sign_in_modal {
+    height: auto;
+    padding: 5px;
+    padding-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#sign_in_header {
+    position: static;
+    margin-top: -5px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sign_in_form {
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#email_signin_label {
+    padding-top: 10px;
+    padding-bottom: 1px;
+    color: #222;
+    font-size: 12px;
+}
+
+#password_signin_label {
+    padding-bottom: 1px;
+    padding-top: 15px;
+    color: #222;
+    font-size: 12px;
+}
+
+#email_signin_input, #password_signin_input {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    height: 40px;
+    box-shadow:0.5px 0.5px rgba(0, 0, 0, 0.2);
+    transition: border .3s;
+}
+
+#email_signin_input:hover, #password_signin_input:hover {
+    border: 1px solid rgb(137, 135, 135);
+}
+
+#signin_btn {
+    align-self: center;
+    margin-top: 20px;
+    border-radius: 20px;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: 0;
+    background-color: #222;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 200ms
+}
+
+#signin_btn:hover {
+    transform: scale(1.05, 1.05);
+    background-color: rgb(70, 69, 69);
+}
+
+.signin_errors {
+    font-size: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

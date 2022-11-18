@@ -1,0 +1,64 @@
+input {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    height: 40px;
+    box-shadow:0.5px 0.5px rgba(0, 0, 0, 0.2);
+    transition: border .3s;
+}
+
+input:hover {
+    border: 1px solid rgb(137, 135, 135);
+}
+
+.register_modal {
+    height: auto;
+    padding-right: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#registration_is_easy {
+    margin-top: 10px;
+}
+
+#registration_is_easy {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(97, 96, 96)
+}
+
+label {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#register_submit_btn {
+    align-self: center;
+    margin-top: 20px;
+    border-radius: 20px;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: 0;
+    background-color: #222;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 200ms
+}
+
+#register_submit_btn:hover {
+    transform: scale(1.05, 1.05);
+    background-color: rgb(70, 69, 69);
+}
+
+#create_acc_header {
+    color: #222;
+}
+
+.register_errors {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}

@@ -1,0 +1,164 @@
+nav{
+  width: 100%;
+  margin: 0;
+}
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  list-style: none;
+  margin: auto;
+  padding: 10px 0;
+  align-items: center;
+  border-bottom: 2px solid lightgray;
+
+}
+
+.navbar li {
+  width: 100%;
+}
+
+
+.home-title{
+  text-decoration: none;
+  color: #F1641E;  /* etsy color */
+  padding-left: 10px;
+  font-size: 40px;
+  padding-right: 5px;
+}
+
+.snacksy-home-bttn {
+  width: 200px;
+}
+
+.search-bar{
+  width: 100%;
+}
+
+.signin-navbar{
+  width: 100px;
+  margin-left: 5px;
+}
+
+.signin-button{
+  border-radius: 50px;
+  border: none;
+  background-color: white;
+  transition: .5s;
+}
+
+.signin-button:hover{
+  box-shadow: 0 0 5px 5px rgb(226, 226, 226);
+  background-color: rgb(226, 226, 226);
+  transition: .5s;
+}
+
+
+.logout-button{
+  width: 100px;
+  margin: 0 5px;
+  border: none;
+  background-color: white;
+  transition: .5s;
+}
+
+.logout-button:hover{
+  border-radius: 50px;
+  transition: .5s;
+  background-color: rgb(226, 226, 226);
+  box-shadow: 0 0 4px 2px rgb(226, 226, 226);
+}
+
+
+
+.shopping-cart {
+  margin: 0 5px;
+  padding: 10px 10px;
+  transition: .5s;
+}
+
+
+.create-snack-bttn {
+  border: none;
+  background-color: white;
+  padding: 12px 12px;
+  margin-left: 5px;
+  color: rgba(0, 0, 0, 0.54);
+  transition: .5s;
+}
+
+.create-snack-bttn:hover{
+  box-shadow: 0 0 4px 2px rgb(226, 226, 226);
+  background-color: rgb(226, 226, 226);
+  border-radius: 50%;
+  transition: .5s;
+}
+
+.shopping-cart:hover{
+  box-shadow: 0 0 4px 2px rgb(226, 226, 226);
+  background-color: rgb(226, 226, 226);
+  border-radius: 50%;
+  transition: .5s;
+}
+
+
+.dropdown-title{
+  position: absolute;
+  right: 130px;
+  color: white;
+  background-color: #222;
+  border-radius: 10px;
+  visibility: hidden;
+  top: 8px;
+  margin-top: 60px;
+}
+
+#drop-down-text{
+  margin: 8px 8px 8px;
+}
+
+.create-snack-bttn:hover + .dropdown-title{
+  visibility: visible;
+  background-color: #222;
+  transition: .3s;
+}
+
+.close_login_btn {
+  position: absolute;
+  top: 5px;
+  right: -40px;
+  color: #FFFFFF;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.close_login_btn:hover {
+  background-color: gray;
+  border-radius: 20px;
+}
+
+.register_btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #222;
+  background-color: transparent;
+  border: 2px solid #222;
+  border-radius: 20px;
+  padding: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.register_btn:hover {
+  transform: scale(1.05, 1.05);
+}

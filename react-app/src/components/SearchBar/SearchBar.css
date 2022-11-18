@@ -1,0 +1,220 @@
+.search {
+    padding-right: 5px;
+}
+.search-inputs {
+    display:flex;
+    flex-direction: row;
+    border: 2px solid black;
+    border-radius: 20px;
+    height: 40px;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.search input {
+    background-color: white;
+    border: 0;
+    margin-left: 10px;
+    margin-top: 3px;
+    font-size: 18px;
+    padding: 5px 5px 5px 5px;
+    height: 25px;
+    width: 100%;
+}
+
+.search input:focus {
+    outline: 0;
+}
+
+.searchIcon {
+    display: flex;
+    border-radius: 40%;
+    margin-right: 5px;
+    margin: 5px 5px 5px 0;
+    background-color: white;
+    place-items: center;
+
+}
+
+.search-icon-button{
+    background-color: white;
+    border: 0;
+}
+
+#search-icon {
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+#search-icon:hover{
+    background-color: lightgray;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+
+#close-button {
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+#close-button:hover{
+    background-color: lightgray;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+.snack-item {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+    transition: background-color;
+    padding-right: 5px;
+    transition: 0.5s;
+}
+
+.snack-item:hover {
+    background-color: lightgrey;
+    transition: 1s;
+}
+
+.snack-result {
+    margin-top: 5px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: rgba(0,0,0,0.35);
+    overflow:hidden;
+    width: 1500px;
+    position: absolute;
+    z-index: 4;
+    transition: .3s;
+}
+
+#snack-title{
+    margin-left: 10px;
+    transition: .5s;
+}
+
+
+@media screen and (max-width:1899px) {
+    .snack-result{
+        width: 1450px;
+        transition: .3s;
+    }
+}
+
+@media screen and (max-width:1844px) {
+    .snack-result{
+        width: 1400px;
+        transition: .3s;
+    }
+}
+
+@media screen and (max-width:1812px) {
+    .snack-result{
+        width: 1350px;
+        transition: .3s;
+    }
+}
+
+@media screen and (max-width:1780px) {
+    .snack-result{
+        width: 1300px;
+        transition: .3s;
+    }
+}
+
+@media screen and (max-width:1735px) {
+    .snack-result{
+        width: 1250px;
+        transition: .3s;
+    }
+}
+
+@media screen and (max-width:1710px) {
+    .snack-result{
+        width: 1200px;
+        transition: .3s;
+    }
+}
+
+@media screen and (max-width:1690px) {
+    .snack-result{
+        width: 1150px;
+        transition: .3s;
+    }
+}
+
+@media screen and (max-width:1640px) {
+    .snack-result{
+        width: 1100px;
+        transition: .3s;
+    }
+}
+
+@media screen and (max-width:1580px) {
+    .snack-result{
+        width: 1050px;
+        transition: .3s;
+    }
+}
+
+@media screen and (max-width:1530px) {
+    .snack-result{
+        width: 1000px;
+        transition: .3s;
+    }
+}
+
+
+@media screen and (max-width:1460px) {
+    .snack-result{
+        width: 950px;
+        transition: .3s;
+    }
+}
+
+@media screen and (max-width:1370px) {
+    .snack-result{
+        width: 900px;
+        transition: .3s;
+    }
+}
+
+@media screen and (max-width:1270px) {
+    .snack-result{
+        width: 700px;
+        transition: .3s;
+    }
+}
+
+@media screen and (max-width:1055px) {
+    .snack-result{
+        width: 500px;
+        transition: .3s;
+    }
+}
+
+@media screen and (max-width:865px) {
+    .snack-result{
+        width: 450px;
+        transition: .3s;
+    }
+}
+
+@media screen and (max-width:825px) {
+    .snack-result{
+        width: 400px;
+        transition: .3s;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .snack-result{
+        width: auto;
+    }
+}

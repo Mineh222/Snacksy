@@ -1,0 +1,210 @@
+
+:root {
+  font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+}
+:root {
+  font-family: "Guardian-EgypTT", Charter, "Charter Bitstream", Cambria, "Noto Serif Light", "Droid Serif", Georgia, serif;
+}
+/* 'Create a New Snack' Title */
+.snackFormTitle {
+  /* border: solid black 1px; */
+  font-family: "Guardian-EgypTT", Charter, "Charter Bitstream", Cambria, "Noto Serif Light", "Droid Serif", Georgia, serif;
+  font-weight: 300;
+  font-size: 30px;
+  width: fit-content;
+  padding: 30px 20px 10px 20px;
+  display: grid;
+  align-items: center;
+  margin: auto
+}
+.sub-title {
+  /* border: solid black 1px; */
+  font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+  font-weight: 300;
+  font-size: 19px;
+  width: fit-content;
+  max-width: 980px;
+  line-height: 30px;
+  padding: 10px 90px 30px 90px;
+  display: grid;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+}
+.errorTitle {
+  font-family: 'Pt Sans', sans-serif;
+}
+.errors {
+  color: red;
+  font-family: 'Pt Sans', sans-serif;
+}
+
+/* Whole Form */
+.createSnackForm {
+  border: solid black 1px;
+  font-weight: 500;
+  font-size: 13px;
+  font-family: "Graphik Webfont",-apple-system,"Helvetica Neue","Droid Sans",Arial,sans-serif;
+  max-width: 1000px;
+  /* width: fit-content; */
+  border: 1px solid #f1f1f1;
+  border-radius: 12px;
+  box-shadow: 2px  2px 8px #888888;
+  padding: 20px 20px 50px 20px;
+  display: grid;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+}
+
+
+/* The input fields inside the form */
+.form-input {
+  border: 1px solid rgb(167, 165, 165);
+  border-radius: 100px;
+  font-size: 15px;
+  font-family: 'Pt Sans', sans-serif;
+  /* max-width: 1000px;
+  min-width: 410px; */
+  width: auto;
+  height: 30px;
+  padding: 0px 13px;
+  margin: 14px 0 10px 0;
+}
+
+.form-input:focus{
+  /* outline: 0; */
+  outline-color: #fc9b6a;
+  /* border-color: #F1641E; */
+  /* box-shadow: 2px  2px 8px #888888; */
+}
+
+
+#description-id {
+  resize: none;
+  padding: 10px 13px 10px 10px;
+  font-family: 'Pt Sans', sans-serif;
+  width: auto;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid rgb(167, 165, 165);
+}
+
+#description-id:focus{
+  outline-color: #fc9b6a;
+}
+
+.div-price-cat {
+  display: block;
+  /* border: 1px solid blue; */
+  width: auto;
+}
+
+/* Specific input price */
+
+  .create-snack-price-input:focus{
+    outline-color: #fc9b6a;
+  }
+
+  .price-div {
+    /* border: 1px solid blue; */
+    float: left;
+    margin-right: 20px;
+    padding-right: 100px;
+    position: relative;
+  }
+.create-snack-price-input {
+  border: 1px solid rgb(167, 165, 165);
+  font-size: 15px;
+  border-left: 0;
+  height: 20px;
+  width: 90px;
+  margin-top: 5px;
+  margin-left: 25px;
+  margin-bottom: -20px;
+  box-shadow: none;
+  border: none;
+  display: flex;
+  position: absolute;
+  z-index: 2;
+}
+/* Money Symbol $ */
+.currency-code {
+  height: 24px;
+  width: 90px;
+  color:#999;
+  padding: 7px 20px 0px 10px;
+  border: 1px solid rgb(167, 165, 165);
+  border-radius: 10px;
+  /* border-right: 0; */
+  line-height: 1.5;
+  background-color: white;
+  position: absolute;
+  z-index: 1;
+}
+
+.price-label {
+  margin: 10px 0px;
+  display: block;
+}
+
+.category-div {
+  float: left;
+}
+
+.category-select {
+  margin: 10px 0;
+  /* width: auto; */
+  max-width: 400px;
+  min-width: 200px;
+  height: 33px;
+  border: 1px solid rgb(167, 165, 165);
+  border-radius: 10px;
+  display: block;
+}
+.category-label {
+  margin: 10px 0px 0px 0px;
+  display: block;
+}
+
+.submit-cancel-btns {
+  display: block;
+}
+
+/* 'Create' button */
+#snackFormSubmit {
+  height: 40px;
+  width: 122px;
+  border: 1px solid blue;
+  margin-right: 33px;
+  background-color: #fc9b6a;
+  color: white;
+  border: none;
+  border-radius: 100px;
+}
+
+#snackFormSubmit:hover {
+  box-shadow: 2px  2px 8px #888888;
+  height: 41px;
+  width: 123px;
+  background-color: #F1641E;
+}
+
+.cancel-button {
+  height: 40px;
+  width: 122px;
+  margin: 10px 0px;
+  border: 1px solid red;
+  background-color: black;
+  color: #f1f1f1;
+  border: none;
+  border-radius: 100px;
+}
+
+.cancel-button:hover {
+  box-shadow: 2px  2px 8px #888888;
+  height: 41px;
+  width: 123px;
+  background-color: rgb(32, 32, 32);
+}

@@ -1,0 +1,95 @@
+.category-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.category-header{
+  background-color:  #fde7db ;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: 2px solid lightgray;
+  text-align: center;
+  align-items: center;
+  width: auto;
+  margin-bottom: 30px;
+}
+
+#category-amount{
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#category-page-title{
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #222;
+  margin: 25px 0 5px;
+}
+
+#category-page-link{
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #222;
+  margin-bottom: 10px;
+  width: 400px;
+}
+
+#category-page-return{
+  margin-top: 150px;
+}
+
+#category-page-link:hover{
+  color: rgb(133, 133, 133);
+}
+
+.category-snack-rows{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.category-snack-card-container{
+  margin: 5px 10px;
+  text-align: center;
+  border-radius: 30px;
+  transition: .5s;
+  width: 300px;
+  border: 1px solid lightgray;
+}
+
+.category-snack-link{
+  text-decoration: none;
+}
+
+.category-snack-link > p {
+  text-align: left;
+  color: black;
+  margin-left: 10px;
+}
+
+#category-snack-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+}
+
+#category-snack-title{
+  margin-left: 30px;
+}
+
+#category-snack-price{
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+
+.category-snack-card-container:hover{
+  box-shadow: 0 0 10px 10px lightgray;
+  transition: .5s;
+}
