@@ -4,7 +4,7 @@ FROM python:3.9
 # Set the following enviroment variables
 #
 # REACT_APP_BASE_URL -> Your deployment URL
-ENV REACT_APP_BASE_URL=https://snacksy.herokuapp.com/
+ENV REACT_APP_BASE_URL=https://snackksy.herokuapp.com/
 ENV FLASK_APP=app
 ENV FLASK_ENV=production
 ENV SQLALCHEMY_ECHO=True
@@ -32,4 +32,3 @@ RUN pip install psycopg2
 # closing command to gunicorn app:app
 
 CMD gunicorn app:app
-
