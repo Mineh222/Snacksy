@@ -41,7 +41,7 @@ const Cart = () => {
                 </div>
                 {cart && cart.quantity > 0 && (
                     <div className="snacky">
-                        <h2>{cart.quantity} snack(s) in your cart</h2>
+                        {/* <h2>{cart.quantity} snack(s) in your cart</h2> */}
                         {cart.snacks && cart.snacks.map(snack => (
                             <div key={snack.id} className='cart-snack'>
                                 <div style={{ 'display': 'none' }}>
@@ -52,7 +52,7 @@ const Cart = () => {
                                     <img src={snack.cover_pic}></img>
                                     <div>
                                         <p>{snack.title}</p>
-                                        <p>${(snack.price).toFixed(2)}</p>
+                                        <p>${(snack.price).toFixed(2)} Each</p>
                                         {/* <p>Qty: {snack.quantity}</p> */}
                                         <EditSnackQtyForm snack={snack} setTrigger={setHasUpdated}/>
                                         <button className='remove-cart-button' onClick={() => dispatch(thunkDeleteFromCart(cart, snack))}>Remove from cart</button>

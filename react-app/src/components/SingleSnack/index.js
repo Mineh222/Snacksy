@@ -132,18 +132,20 @@ export default function SingleSnack() {
                         <h3 className='single-des'>{snack.description}</h3>
                         <form onSubmit={handleSubmit}>
                             {sessionUser && cart && !stringify(cart.snacks).includes(JSON.stringify(snack)) && (
-                                <>
-                                    <label>Qty</label>
-                                    <select onChange={(e) => setQuantity(parseInt(e.target.value))}
-                                        value={quantity}>
-                                        <option value={1}>1</option>
-                                        <option value={2}>2</option>
-                                        <option value={3}>3</option>
-                                        <option value={4}>4</option>
-                                        <option value={5}>5</option>
-                                    </select>
+                                <div className='single_snack_qty'>
+                                    <div className='single_snack_qty2'>
+                                        <label id="qty_label">Qty:</label>
+                                        <select id="qty_select" onChange={(e) => setQuantity(parseInt(e.target.value))}
+                                            value={quantity}>
+                                            <option value={1}>1</option>
+                                            <option value={2}>2</option>
+                                            <option value={3}>3</option>
+                                            <option value={4}>4</option>
+                                            <option value={5}>5</option>
+                                        </select>
+                                    </div>
                                     <button className='addToCartbtn' type="submit">Add to Cart</button>
-                                </>
+                                </div>
                             )}
                             {cart && cart.snacks && stringify(cart.snacks).includes(JSON.stringify(snack)) && (
                                 <p className='already-in-cart'>This snack is in your cart!</p>

@@ -109,3 +109,26 @@
     box-shadow: 2px  2px 8px #888888;
     background-color: rgb(32, 32, 32);
 }
+
+.single_snack_qty {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.single_snack_qty2 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#qty_label {
+    font-size: 16px;
+}
+
+#qty_select {
+    width: 50px;
+    border-radius: 10px;
+    padding-left: 15px;
+}

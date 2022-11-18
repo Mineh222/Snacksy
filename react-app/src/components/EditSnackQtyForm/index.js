@@ -19,9 +19,9 @@ export default function EditSnackQtyForm({snack, setTrigger}) {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label>Qty</label>
-            <select onChange={(e) => setQuantity(parseInt(e.target.value))}
+        <form className="update_snack_qty_form" onSubmit={handleSubmit}>
+            <label id="qty_label">Qty:</label>
+            <select id="qty_select" onChange={(e) => setQuantity(parseInt(e.target.value))}
                 value={quantity}>
                 <option value={1}>1</option>
                 <option value={2}>2</option>
@@ -29,7 +29,7 @@ export default function EditSnackQtyForm({snack, setTrigger}) {
                 <option value={4}>4</option>
                 <option value={5}>5</option>
             </select>
-            <button className='addToCartbtn' type="submit">Update Qty</button>
+            <button className='update_qty_btn' type="submit">Update Qty</button>
         </form>
     )
 
