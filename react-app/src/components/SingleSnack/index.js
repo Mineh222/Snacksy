@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-
 import { thunkDeleteSnack, thunkGetSingleSnack, thunkEditSnackQty } from '../../store/snacks';
 import { thunkAddToCart } from '../../store/cart';
 import { useParams, useHistory, Link } from 'react-router-dom';
@@ -18,7 +17,6 @@ export default function SingleSnack() {
     const history = useHistory();
     const { snackId } = useParams();
     const [quantity, setQuantity] = useState(1);
-    console.log(quantity)
 
     const [showLoginForm, setShowLoginForm] = useState(false);
     const [showSignupForm, setShowSignupForm] = useState(false);

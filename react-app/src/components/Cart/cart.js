@@ -1,16 +1,18 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { thunkDeleteFromCart, thunkGetCart } from "../../store/cart";
 import { useHistory } from 'react-router-dom';
 import OrderForm from "../OrderForm/orderForm";
+import EditSnackQtyForm from "../EditSnackQtyForm";
 import './cart.css'
 
 const Cart = () => {
     const cart = useSelector(state => Object.values(state.shoppingCart)[0]);
+    const [hasUpdated, setHasUpdated] = useState(false);
+    console.log(hasUpdated);
+
     const userId = useSelector(state => state.session?.user?.id);
     const history = useHistory()
-
-    // const [quantity, setQuantity] = useState(1);
 
     let total = 0
     let totalItems = 0
@@ -19,8 +21,11 @@ const Cart = () => {
 
     useEffect(() => {
         dispatch(thunkGetCart(userId))
-    }, [dispatch]);
-
+        if (hasUpdated) {
+            dispatch(thunkGetCart(userId))
+            setHasUpdated(false)
+        }
+    }, [dispatch, hasUpdated]);
 
     return (
         <div className='cart'>
@@ -40,14 +45,16 @@ const Cart = () => {
                         {cart.snacks && cart.snacks.map(snack => (
                             <div key={snack.id} className='cart-snack'>
                                 <div style={{ 'display': 'none' }}>
-                                    {total += snack.price}
-                                    {totalItems += 1}
+                                    {total += (snack.price * snack.quantity)}
+                                    {totalItems += snack.quantity}
                                 </div>
                                 <div className="snack-display">
                                     <img src={snack.cover_pic}></img>
                                     <div>
                                         <p>{snack.title}</p>
                                         <p>${(snack.price).toFixed(2)}</p>
+                                        {/* <p>Qty: {snack.quantity}</p> */}
+                                        <EditSnackQtyForm snack={snack} setTrigger={setHasUpdated}/>
                                         <button className='remove-cart-button' onClick={() => dispatch(thunkDeleteFromCart(cart, snack))}>Remove from cart</button>
                                     </div>
                                 </div>
