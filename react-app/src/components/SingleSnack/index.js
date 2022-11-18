@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { thunkDeleteSnack, thunkGetSingleSnack } from '../../store/snacks';
+import { thunkDeleteSnack, thunkGetSingleSnack, thunkEditSnackQty } from '../../store/snacks';
 import { thunkAddToCart } from '../../store/cart';
 import { useParams, useHistory, Link } from 'react-router-dom';
 import { thunkGetCart } from '../../store/cart';
@@ -34,6 +34,13 @@ export default function SingleSnack() {
 
     async function handleSubmit(e) {
         e.preventDefault();
+
+        const updatedSnackQty = {
+            ...snack,
+            quantity
+        }
+
+        dispatch(thunkEditSnackQty(updatedSnackQty))
 
         if (cart) {
             const ok = await dispatch(thunkAddToCart(cart, snack, quantity))

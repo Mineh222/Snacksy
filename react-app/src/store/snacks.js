@@ -4,6 +4,7 @@ const GET_SEARCHED_SNACKS ='snack/getSearchedSnacks';
 const GET_CATEGORY = 'snack/getCategory';
 const POST_SNACK = 'snack/postSnack';
 const EDIT_SNACK = 'snack/editSnack';
+const EDIT_SNACK_QTY = 'snack/editSnackQty';
 const DELETE_SNACK = 'snack/deleteSnack'
 
 
@@ -45,6 +46,13 @@ export const actionPostSnack = (snack) => {
 export const actionEditSnack = (snack) => {
     return {
         type: EDIT_SNACK,
+        snack
+    }
+}
+
+export const actionEditSnackQty = (snack) => {
+    return {
+        type: EDIT_SNACK_QTY,
         snack
     }
 }
@@ -124,6 +132,20 @@ export const thunkEditSnack = (snack) => async dispatch => {
     }
 }
 
+export const thunkEditSnackQty = (snack) => async dispatch => {
+    const response = await fetch(`/api/snacks/${snack.id}`, {
+        method: 'PUT',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(snack)
+    })
+
+    if (response.ok) {
+        const editedSnackQty = await response.json();
+        dispatch(actionEditSnackQty(editedSnackQty));
+        return editedSnackQty
+    }
+}
+
 export const thunkDeleteSnack = (id) => async dispatch => {
     const response = await fetch(`/api/snacks/${id}/delete`, {
         method: 'DELETE',
@@ -168,6 +190,10 @@ const snacksReducer = (state = initialState, action) => {
             return newState
 
         case EDIT_SNACK:
+            newState[action.snack.id] = action.snack
+            return newState
+
+        case EDIT_SNACK_QTY:
             newState[action.snack.id] = action.snack
             return newState
 
