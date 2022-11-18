@@ -18,6 +18,7 @@ export default function SingleSnack() {
     const history = useHistory();
     const { snackId } = useParams();
     const [quantity, setQuantity] = useState(1);
+    console.log(quantity)
 
     const [showLoginForm, setShowLoginForm] = useState(false);
     const [showSignupForm, setShowSignupForm] = useState(false);
@@ -126,7 +127,18 @@ export default function SingleSnack() {
                         <h3 className='single-des'>{snack.description}</h3>
                         <form onSubmit={handleSubmit}>
                             {sessionUser && cart && !stringify(cart.snacks).includes(JSON.stringify(snack)) && (
-                                <button className='addToCartbtn' type="submit">Add to Cart</button>
+                                <>
+                                    <label>Qty</label>
+                                    <select onChange={(e) => setQuantity(parseInt(e.target.value))}
+                                        value={quantity}>
+                                        <option value={1}>1</option>
+                                        <option value={2}>2</option>
+                                        <option value={3}>3</option>
+                                        <option value={4}>4</option>
+                                        <option value={5}>5</option>
+                                    </select>
+                                    <button className='addToCartbtn' type="submit">Add to Cart</button>
+                                </>
                             )}
                             {cart && cart.snacks && stringify(cart.snacks).includes(JSON.stringify(snack)) && (
                                 <p className='already-in-cart'>This snack is in your cart!</p>
@@ -160,20 +172,6 @@ export default function SingleSnack() {
                         </div>
                     </>
                 }
-                {/* {!sessionUser && (
-                    <>
-                        <button className='sign-in-to-addCart' onClick={openLoginModal}>Sign in to Add to cart</button>
-                        <Modal isOpen={showLoginForm} style={formStyles}>
-                            <button className="close_login_btn" onClick={() => setShowLoginForm(false)}>X</button>
-                            <LoginForm />
-                            <button className="register_btn" onClick={openClose}>Register</button>
-                        </Modal>
-                        <Modal isOpen={showSignupForm} style={formStyles}>
-                            <button className="close_login_btn" onClick={() => setShowSignupForm(false)}>X</button>
-                            <SignUpForm setTrigger={setShowSignupForm} />
-                        </Modal>
-                    </>
-                )} */}
             </div>
             <Reviews />
         </>

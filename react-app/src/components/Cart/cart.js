@@ -10,6 +10,8 @@ const Cart = () => {
     const userId = useSelector(state => state.session?.user?.id);
     const history = useHistory()
 
+    // const [quantity, setQuantity] = useState(1);
+
     let total = 0
     let totalItems = 0
 
