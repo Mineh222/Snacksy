@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from app.models import db, Snack, Review, User
-from app.forms import SnackForm, ReviewForm
+from app.forms import SnackForm, ReviewForm, SnackQtyForm
 
 snack_routes = Blueprint('snacks', __name__)
 
@@ -57,6 +57,19 @@ def edit_snack(id):
         snack.price = form.data['price']
         snack.category = form.data['category']
 
+        db.session.commit()
+        return snack.to_dict()
+    return {'errors': validation_errors_to_error_messages(form.errors)}, 400
+
+
+# EDIT SNACK QUANTITY
+@snack_routes.route('/<id>', methods=['PUT'])
+def update_snack_qty(id):
+    form = SnackQtyForm()
+    form['csrf_token'].data = request.cookies['csrf_token']
+    snack = Snack.query.get(id)
+    if form.validate_on_submit():
+        snack.quantity = form.data['quantity']
         db.session.commit()
         return snack.to_dict()
     return {'errors': validation_errors_to_error_messages(form.errors)}, 400

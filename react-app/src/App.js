@@ -29,7 +29,7 @@ function App() {
 
   useEffect(() => {
     (async () => {
-      await dispatch(thunkGetAllSnacks());
+      // await dispatch(thunkGetAllSnacks());
       await dispatch(authenticate());
       setLoaded(true);
     })();

@@ -11,6 +11,7 @@ class Snack(db.Model):
     description = db.Column(db.String(500), nullable=False)
     price = db.Column(db.Float, nullable=False)
     category = db.Column(db.String(20), nullable=False)
+    quantity = db.Column(db.Integer, default=1)
 
 
     # users = db.relationship("User", back_populates="snack")
@@ -41,5 +42,6 @@ class Snack(db.Model):
             'description': self.description,
             'price': self.price,
             'category': self.category,
+            'quantity': self.quantity
             # 'shopping_carts': self.getshopped()
         }

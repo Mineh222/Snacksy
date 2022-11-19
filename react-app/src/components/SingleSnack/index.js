@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-
-import { thunkDeleteSnack, thunkGetSingleSnack } from '../../store/snacks';
+import { thunkDeleteSnack, thunkGetSingleSnack, thunkEditSnackQty } from '../../store/snacks';
 import { thunkAddToCart } from '../../store/cart';
 import { useParams, useHistory, Link } from 'react-router-dom';
 import { thunkGetCart } from '../../store/cart';
@@ -33,6 +32,13 @@ export default function SingleSnack() {
 
     async function handleSubmit(e) {
         e.preventDefault();
+
+        const updatedSnackQty = {
+            ...snack,
+            quantity
+        }
+
+        dispatch(thunkEditSnackQty(updatedSnackQty))
 
         if (cart) {
             const ok = await dispatch(thunkAddToCart(cart, snack, quantity))
@@ -126,7 +132,20 @@ export default function SingleSnack() {
                         <h3 className='single-des'>{snack.description}</h3>
                         <form onSubmit={handleSubmit}>
                             {sessionUser && cart && !stringify(cart.snacks).includes(JSON.stringify(snack)) && (
-                                <button className='addToCartbtn' type="submit">Add to Cart</button>
+                                <div className='single_snack_qty'>
+                                    <div className='single_snack_qty2'>
+                                        <label id="qty_label">Qty:</label>
+                                        <select id="qty_select" onChange={(e) => setQuantity(parseInt(e.target.value))}
+                                            value={quantity}>
+                                            <option value={1}>1</option>
+                                            <option value={2}>2</option>
+                                            <option value={3}>3</option>
+                                            <option value={4}>4</option>
+                                            <option value={5}>5</option>
+                                        </select>
+                                    </div>
+                                    <button className='addToCartbtn' type="submit">Add to Cart</button>
+                                </div>
                             )}
                             {cart && cart.snacks && stringify(cart.snacks).includes(JSON.stringify(snack)) && (
                                 <p className='already-in-cart'>This snack is in your cart!</p>
@@ -160,20 +179,6 @@ export default function SingleSnack() {
                         </div>
                     </>
                 }
-                {/* {!sessionUser && (
-                    <>
-                        <button className='sign-in-to-addCart' onClick={openLoginModal}>Sign in to Add to cart</button>
-                        <Modal isOpen={showLoginForm} style={formStyles}>
-                            <button className="close_login_btn" onClick={() => setShowLoginForm(false)}>X</button>
-                            <LoginForm />
-                            <button className="register_btn" onClick={openClose}>Register</button>
-                        </Modal>
-                        <Modal isOpen={showSignupForm} style={formStyles}>
-                            <button className="close_login_btn" onClick={() => setShowSignupForm(false)}>X</button>
-                            <SignUpForm setTrigger={setShowSignupForm} />
-                        </Modal>
-                    </>
-                )} */}
             </div>
             <Reviews />
         </>

@@ -179,3 +179,20 @@ input[type='radio'] {
 #how_pay {
     margin-bottom: 20px;
 }
+
+.update_snack_qty_form {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.update_qty_btn {
+    width: 6.5rem;
+    height: 1.5rem;
+    border: none;
+    border-radius: 10rem;
+    background-color: #222;
+    color: white;
+}
