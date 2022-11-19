@@ -44,7 +44,7 @@ def seed_snacks():
     title="Arizona Green Tea",
     description="Enjoy our 100% natural AriZona Green Tea iced or served up hot, with just the right amount of ginseng, honey and cane sugar. Reflect on all that goodness, delicious as ever. PREMIUM BREWED GREEN TEA FILTERED WATER, CANE SUGAR, HONEY, NATURAL FLAVOR, ASCORBIC ACID (VITAMIN C), CITRIC ACID, GINSENG EXTRACT.",
     price=0.99,
-    category="Beverage"
+    category="Beverages"
   )
 
   hawaiian_chips=Snack(
@@ -197,7 +197,7 @@ def seed_snacks():
     title="Coca-Cola Classic 8oz Glass Bottles",
     price=32.99,
     description="Soda. Pop. Soft drink. Sparkling beverage. Whatever you call it, nothing compares to the refreshing, crisp taste of Coca-Cola Original Taste, the delicious soda you know and love. Enjoy with friends, on the go or with a meal. Whatever the occasion, wherever you are, Coca-Cola Original Taste makes life's special moments a little bit better.Carefully crafted in 1886, its great taste has stood the test of time. Something so delicious, so unique and so familiar, it's what makes you think 'Coca-Cola' whenever you hear 'soft drink.' Between that perfect taste and refreshing fizz, it's sure to give you that 'ahhh' moment whenever you want it. Every sip, every 'ahhh,' every smile—find that feeling with Coca-Cola Original Taste. Best enjoyed ice-cold for maximum refreshment. Grab a Coca-Cola Original Taste, take a sip and find your 'ahhh' moment.Enjoy Coca-Cola Original Taste.",
-    category="Beverage"
+    category="Beverages"
   )
 
   iced_tea=Snack(
@@ -206,7 +206,7 @@ def seed_snacks():
     title="Pure Leaf Iced Tea, Raspberry",
     price=18.00,
     description="Brewed from real tea leaves picked at their freshest, never from powder or concentrate. No artificial sweeteners or added color. A bold tart berry flavor meets the smooth character of black tea leaves. 180 calories per bottle. Includes twelve 18.5 ounce bottles.",
-    category="Beverage"
+    category="Beverages"
   )
 
   red_bull=Snack(
@@ -215,7 +215,7 @@ def seed_snacks():
     title="Red Bull Energy Drink",
     price=2.00,
     description="RED BULL GIVES YOU WINGS! Red Bull Energy Drink's special formula contains ingredients of high quality: Caffeine, Taurine, some B-Group Vitamins, Sugars. Vitalizes Body and Mind. One 12 fl oz can of Red Bull Energy Drink contains 114 mg of caffeine, about the same amount as in an equal serving of home-brewed coffee.",
-    category="Beverage"
+    category="Beverages"
   )
 
   blue_gatorade=Snack(
@@ -224,7 +224,7 @@ def seed_snacks():
     title="Gatorade Thirst Quencher Cool Blue",
     price=1.59,
     description="With a legacy over 50 years in the making, it's the most scientifically researched and game-tested way to replace electrolytes lost in sweat. Gatorade hydrates better than water, which is why it's trusted by some of the world's best athletes. When you sweat, you lose more than water - Gatorade contains critical electrolytes to help replace what's lost in sweat. Top off your fuel stores with carbohydrate energy, your body's preferred source of fuel. Tested in the lab and used by the pros. Cool blue flavor. 28 oz bottle.",
-    category="Beverage"
+    category="Beverages"
   )
 
   db.session.add(ruffles)
