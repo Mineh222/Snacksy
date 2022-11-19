@@ -2,7 +2,6 @@
 FROM python:3.9
 
 # Set the following enviroment variables
-#
 # REACT_APP_BASE_URL -> Your deployment URL
 ENV REACT_APP_BASE_URL=https://snackksy.herokuapp.com/
 ENV FLASK_APP=app
