@@ -1,21 +1,20 @@
-<div align='center'>
+<div>
   <img src="https://i.postimg.cc/LsXWGHRg/Screen-Shot-2022-07-31-at-8-30-46-PM.png"></img>
-  <p align='center'>
+  <p>
     ·
     <a href="https://snackksy.herokuapp.com/">
-      Snacksy
+      Live link to Snacksy
     </a>
     ·
   </p>
-  <p align='center'>
-    Explore original code base with contributions from myself and 3 other developers:
+  <p>
+    Explore the original code base with contributions from myself and 3 other developers:
     <a href="https://github.com/joshsalcido/Snacksy">here</a>
-    --->
   </p>
-  <p align='center'>
+  <p>
     What I've improved on: Adding a update quantity feature to the shopping cart for each item.
   </p>
-   <p align='center'>
+   <p>
     What I'm currently working on: Implementing a user profile page that displays a user's account information and any snacks they have posted to sell     on Snacksy.
   </p>
   <h1>Welcome to Snacksy!</h1>
