@@ -9,8 +9,14 @@
   </p>
   <p align='center'>
     Explore original code base with contributions from myself and 3 other developers:
-    <a href="https://github.com/joshsalcido/Snacksy</a>
+    <a href="https://github.com/joshsalcido/Snacksy">here</a>
     --->
+  </p>
+  <p align='center'>
+    What I've improved on: Adding a update quantity feature to the shopping cart for each item.
+  </p>
+   <p align='center'>
+    What I'm currently working on: Implementing a user profile page that displays a user's account information and any snacks they have posted to sell     on Snacksy.
   </p>
   <h1>Welcome to Snacksy!</h1>
   
@@ -143,7 +149,3 @@ const handleFilter = (e) => {
                 </div>
             )}
 ```
-
-
-## Future Improvements
-* User profile page that displays a user's account information and any snacks they have posted to sell on Snacksy.
