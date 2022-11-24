@@ -1,19 +1,15 @@
 <div align='center'>
   <img src="https://i.postimg.cc/LsXWGHRg/Screen-Shot-2022-07-31-at-8-30-46-PM.png"></img>
-  <h3> 
-    Developers: Mineh Gharabegi, Amy Lopez, Josh Salcido, and Michael Dasch 
-  </h3>
   <p align='center'>
     ·
-    <a href="https://snacksy.herokuapp.com/">
+    <a href="https://snackksy.herokuapp.com/">
       Snacksy
     </a>
     ·
   </p>
-  <p align="center">Project Advisor: Brad Simpson</p>
   <p align='center'>
-    Explore the docs to see how to get 
-    <a href="https://github.com/joshsalcido/Snacksy/wiki">started</a>
+    Explore original code base with contributions from myself and 3 other developers:
+    <a href="https://github.com/joshsalcido/Snacksy</a>
     --->
   </p>
   <h1>Welcome to Snacksy!</h1>
@@ -151,4 +147,3 @@ const handleFilter = (e) => {
 
 ## Future Improvements
 * User profile page that displays a user's account information and any snacks they have posted to sell on Snacksy.
-* User ability to upgrade their snack quantities inside their shopping cart.
